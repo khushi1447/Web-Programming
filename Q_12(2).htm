@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q_12(2)</title>
+    <style>
+        table {
+            width: 500px;
+			border:2px solid black;
+        }
+        td {
+            width: 300px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td style="background-color: red;" onmouseover="changeColor('red')"></td>
+            <td style="background-color: blue;" onmouseover="changeColor('blue')"></td>
+			<td style="background-color: green;" onmouseover="changeColor('green')"></td>
+        </tr>
+    </table>
+    <br>
+    <input type="text" id="colorTextBox" placeholder="Enter Name">
+
+    <script>
+        function changeColor(color) {
+            document.getElementById('colorTextBox').style.color = color;
+        }
+    </script>
+</body>
+</html>

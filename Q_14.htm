@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Q_14</title>
+		<script type="text/javascript">
+			function myfunction() {
+				alert("KHUSHI");
+			}
+			function forprompt() {
+				val = prompt("Enter Your Name","Enter Here");
+				document.write("Your Name is ",val);
+			}
+			function forconfirm() {
+				var ab=confirm("Do you want to Confirm");
+				if(ab==true){
+					document.write("You Want to Continue.");
+					return true;
+				}
+				else{
+				document.write("You don't Want.")
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Alert" onclick="myfunction()"><br><br>
+		<input type="button" value="Prompt" onclick="forprompt()"><br><br>
+		<input type="button" value="Confirm" onclick="forconfirm()">
+	</body>
+</html>

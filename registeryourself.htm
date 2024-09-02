@@ -1,0 +1,218 @@
+<html>
+	<head>
+		<title>Q_10</title>
+		<style>
+		.t1{
+		background-color:lightgray;
+		font-family:italic;
+		}
+		.t2{
+			color:red;
+		}
+		.btn1{
+		padding:2px 40px;
+		background-color:green;
+		}
+		.btn2{
+		padding:2px 40px;
+		background-color:green;
+		}
+		</style>
+	</head>
+	<body>
+	<form name="myForm">
+		<table class="t1" border=3 align=center cellpadding=1 cellspacing=1>
+		<tr>
+			<td colspan=2>
+			<img src="C:\Users\Admin\Pictures\istar.png"alt="logo" height="100px" width="860px" align=center>
+			</td>
+		</tr>
+		<tr align=center>
+		<td colspan=2>
+		<b>M.SC(INFORMATION TECHNOLOGY)</b>
+		</td>
+		</tr>
+		<tr align=center>
+		<td colspan=2>
+		<b>STUDENT REGISTRATION FORM (ACADEMICYEAR 2024-2025)</b>
+		</td>
+		</tr>
+		<tr>
+		<td style=color:red>FIRST NAME:</td>
+		<td><input type="text" name="fname"></td>
+		</tr>
+		<tr>
+		<td style=color:red>LAST NAME:</td>
+		<td><input type="text" name="lname"></td>
+		</tr>
+		<tr>
+		<td style=color:red>BIRTH DATE:</td>
+		<td><input type="text" name="dob"></td>
+		</tr>
+		<tr>
+		<td style=color:red>ADDRESS:</td>
+		<td><textarea cols="22" rows="4" name="address"></textarea></td>
+		</tr>
+		<tr>
+		<td style=color:red>CITY:</td>
+		<td>
+			<select name="city" id="city">
+				<option value="#">Choose City</option>
+				<option value="Surat">Surat</option>
+				<option value="Vadodra">Vadodra</option>
+				<option value="Ahemdabad">Ahemdabad</option>
+			</select>
+		</td>
+		</tr>
+		<tr>
+		<td style=color:red>STATE:</td>
+		<td>
+			<select name="state" id="state">
+				<option value="#">Choose State</option>
+				<option value="Gujrat">Gujrat</option>
+				<option value="Rajshthan">Rajshthan</option>
+				<option value="Madhypradesh">Madhypradesh</option>
+			</select>
+		</td>
+		</tr>
+		<tr>
+		<td style=color:red>GENDER:</td>
+		<td>
+			<input type="radio" name="gender" id="gender1">Male<br>
+			<input type="radio" name="gender" id="gender2">Female	
+		</td>
+		</tr>
+		<tr>
+		<td style=color:red>HOBBIES:</td>
+		<td>
+			<input type="Checkbox" value="singing" name="chck1" id="chck1">Singing
+			<input type="Checkbox" value="playing" name="chck2" id="chck2">Playing
+			<input type="Checkbox" value="dancing" name="chck3" id="chck3">Dancing
+			<input type="Checkbox" value="other" name="chck4" id="chck4">Others
+			<input type="text" value="" name="othr" id="othr">
+		</td>
+		</tr>
+		<tr>
+		<td style=color:red>QUALIFICATION:</td>
+		<td>
+		<table class="t2" border=2 align=center cellpadding=1 cellspacing=1>
+			<tr>
+			<th>SR.NO</th>
+			<th>EXAMINATION</th>
+			<th>BOARD</th>
+			<th>PERCENTAGE</th>
+			<th>YEAR OF PASSING</th>
+			</tr>
+			<tr align=center>
+			<td>1.</td>
+			<td>Class X</td>
+			<td>
+				<input type="text" value="" name="brd1" id="brd1">
+			</td>
+			<td>
+				<input type="text" value="" name="prcntg1" id="prcntg1">
+			</td>
+			<td>
+				<input type="text" value="" name="yop1" id="yop1">
+			</td>
+			</tr>
+			<tr align=center>
+			<td>2.</td>
+			<td>Class XII</td>
+			<td>
+				<input type="text" value="" name="brd2" id="brd2">
+			</td>
+			<td>
+				<input type="text" value="" name="prcntg2" id="prcntg2">
+			</td>
+			<td>
+				<input type="text" value="" name="yop2" id="yop2">
+			</td>
+			</tr>
+			<tr align=center>
+			<td>3.</td>
+			<td>Graduation</td>
+			<td>
+				<input type="text" value="" name="brd3" id="brd3">
+			</td>
+			<td>
+				<input type="text" value="" name="prcntg2" id="prcntg3">
+			</td>
+			<td>
+				<input type="text" value="" name="yop3" id="yop3">
+			</td>
+			</tr>
+		</table>
+		</td>
+		</tr>
+		<tr>
+		<td colspan=5 align=center>
+		<input type="submit" class="btn1" value="Submit" onclick="check()">&nbsp;&nbsp;
+		<input type="reset" class="btn2" value="Reset">
+		</td>
+		</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+	function check() {
+			if(document.myForm.fname.value==""){
+			alert("Please Enter FirstName");	
+			}
+			if(document.myForm.lname.value==""){
+			alert("Please Enter LastName");
+			}
+			if(document.myForm.dob.value==""){
+			alert("Please Enter Birth Date");
+			}
+			if(document.myForm.address.value==""){
+			alert("Please Enter Address");
+			}
+			if(document.myForm.city.value=="#"){
+			alert("Please Enter City");
+			}
+			if(document.myForm.state.value=="#"){
+			alert("Please Enter State");
+			}
+			if(document.getElementById("gender1").checked==false &&
+			document.getElementById("gender2").checked==false){
+			alert("Please Enter Gender");
+			}
+			if(document.myForm.chck1.checked==false && 
+			document.myForm.chck2.checked==false && 
+			document.myForm.chck3.checked==false && 
+			document.myForm.chck4.checked==false &&
+			document.myForm.othr.value==""){
+			alert("Please Enter Hobbies");
+			}
+			if(document.myForm.brd1.value==""){
+			alert("Please Enter ClassX Board");	
+			}
+			if(document.myForm.prcntg1.value==""){
+			alert("Please Enter ClassX Percentage");
+			}
+			if(document.myForm.yop1.value==""){
+			alert("Please Enter ClassX Passing Year");
+			}
+			if(document.myForm.brd2.value==""){
+			alert("Please Enter ClassXII Board");	
+			}
+			if(document.myForm.prcntg2.value==""){
+			alert("Please Enter ClassXII Percentage");
+			}
+			if(document.myForm.yop2.value==""){
+			alert("Please Enter ClassXII Passing Year");
+			}
+			if(document.myForm.brd3.value==""){
+			alert("Please Enter Graduation Board");	
+			}
+			if(document.myForm.prcntg3.value==""){
+			alert("Please Enter Graduation Percentage");
+			}
+			if(document.myForm.yop3.value==""){
+			alert("Please Enter Graduation Passing Year");
+			}
+			return(true);
+		}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,122 @@
+<html>
+<head>
+	<title>Q_9</title>
+	<style>
+		.table{
+			margin-top:50px;
+			background-color:powderblue;
+			font-size:20px;
+			font-family:italic;
+			color:red;
+			height:90px;
+		}
+		.btn{
+		border-radius:5px;
+		padding:2px 40px;
+		}
+		.btn2{
+		border-radius:5px;
+		padding:2px 80px;
+		}
+	</style>
+</head>
+<body>
+	<form name="myForm" action="" >
+	<table class="table" align=center cellpadding=5 cellspacing=4>
+		<tr>
+		<td colspan=2 align=center>
+		<h1 style="font-color:red">ENTRY FORM</h1>
+		</td>
+		</tr>
+		<tr>
+			<td>Enter Your Name:</td>
+			<td><input type="text" name="Name" id="name" placeholder="Enter Name"></td>
+		</tr>
+		<tr>
+			<td>Enter Your Age:</td>
+			<td><input type="text" name="Age" id="age"  placeholder="Enter Age"></td>
+		</tr>
+		<tr>
+			<td>Enter Your Address:</td>
+			<td><textarea cols="22" rows="5" name="Address" id="address" placeholder="Enter Address"></textarea></td>
+		</tr>
+		<tr>
+			<td>Sex:</td>
+			<td border=2>	
+				<input type="radio" name="gender" id="gender1">Male<br>
+				<input type="radio" name="gender" id="gender2">Female	
+			</td>
+		</tr>
+		<tr>
+			<td>Language:</td>
+			<td>
+				<input type="Checkbox" value="java" name="chck1" id="chck1">JAVA<br>
+				<input type="Checkbox" value="python" name="chck2" id="chck2">PYTHON<br>
+				<input type="Checkbox" value=".net" name="chck3" id="chck3">.NET<br>
+				<input type="Checkbox" value="php" name="chck4" id="chck4">PHP<br>
+				<input type="Checkbox" value="others" name="chck5" id="chck5">Others<br>
+			</td>
+		</tr>
+		<tr>
+		<td>Enter Your Password</td>
+		<td> <input type="password" name="pass" id="pass" placeholder="Enter Password"></td>
+		</tr>
+		<tr>
+		<td  align=center colspan=2>
+		<input type="button" class="btn" value="Reset" onclick="reset1()">
+		<input type="button" class="btn" value="Check" onclick="check()">
+		</td>
+		</tr>
+		<tr>
+		<td colspan=2 align=center>Before submitting the datas please click the<br>check Button</td>
+		</tr>
+		<tr>
+		<td colspan=2 align=center>
+		<input type="submit" value="Submit" class="btn2">
+		</td>
+		</tr>
+	</table>
+	</form>
+	<script>
+		function check() {
+			if(document.myForm.Name.value==""){
+			alert("Please Enter Name");	
+			}
+			if(document.myForm.Age.value==""){
+			alert("Please Enter Age");
+			}
+			if(document.myForm.Address.value==""){
+			alert("Please Enter Address");
+			}
+			if(document.getElementById("gender1").checked==false &&
+			document.getElementById("gender2").checked==false){
+			alert("Please Enter Gender");
+			}
+			if(document.myForm.chck1.checked==false && 
+			document.myForm.chck2.checked==false && 
+			document.myForm.chck3.checked==false && 
+			document.myForm.chck4.checked==false && 
+			document.myForm.chck5.checked==false){
+			alert("Please Enter Language");
+			}
+			if(document.myForm.pass.value==""){
+			alert("Please Enter Password");
+			}
+			return(true);
+		}
+		function reset1(){
+			document.getElementById("name").value="";
+			document.getElementById("age").value="";
+			document.getElementById("address").value="";
+			document.getElementById("gender1").checked=false;
+			document.getElementById("gender2").checked=false;
+			document.getElementById("chck1").checked=false;
+			document.getElementById("chck2").checked=false;
+			document.getElementById("chck3").checked=false;
+			document.getElementById("chck4").checked=false;
+			document.getElementById("chck5").checked=false;
+			document.getElementById("pass").value="";
+		}
+	</script>
+</body>
+</html>

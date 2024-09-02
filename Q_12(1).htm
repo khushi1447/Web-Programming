@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Q_12(1)</title>
+</head>
+
+<body>
+    <img id="image1" src="india.jpg" onmousedown="changeImage()" onclick="backImage()" alt="flagimage" />
+    <script>
+        function changeImage() {
+            var img = document.getElementById("image1");
+            if (img.src =="india.jpg") {
+                img.src = "";
+            } else {
+                img.src = "america.jpg";
+            }
+        }
+        function backImage() {
+            var img = document.getElementById("image1");
+            if (img.src == "america.jpg") {
+                img.src = "";
+            } else {
+                img.src = "india.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
